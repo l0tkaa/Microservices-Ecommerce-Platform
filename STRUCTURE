@@ -1,0 +1,66 @@
+ecommerce-platform/
+│
+├── product-service/            # Spring Boot Product service
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/example/product/   # Java code for product service
+│   │   │   │       ├── controller/       # REST controllers
+│   │   │   │       ├── model/            # Data models
+│   │   │   │       ├── repository/       # Repository interfaces (JPA)
+│   │   │   │       ├── service/          # Service layer
+│   │   │   │       └── ProductServiceApplication.java  # Main application
+│   │   │   └── resources/
+│   │   │       ├── application.properties   # Configuration
+│   │   │       └── data.sql                 # SQL scripts
+│   ├── Dockerfile                          # Dockerfile for containerizing the service
+│   ├── product-service.yaml                # Kubernetes deployment and service
+│   └── pom.xml                             # Maven project file
+│
+├── order-service/              # Node.js Order service
+│   ├── src/
+│   │   ├── controllers/        # API controllers
+│   │   ├── models/             # Data models
+│   │   ├── services/           # Business logic
+│   │   └── app.js              # Main application file
+│   ├── Dockerfile              # Dockerfile for containerizing the service
+│   ├── order-service.yaml      # Kubernetes deployment and service
+│   ├── package.json            # Node.js dependencies and scripts
+│   └── package-lock.json       # Lock file for dependencies
+│
+├── inventory-service/          # Spring Boot Inventory service
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/example/inventory/  # Java code for inventory service
+│   │   │   │       ├── controller/         # REST controllers
+│   │   │   │       ├── model/              # Data models
+│   │   │   │       ├── repository/         # Repository interfaces
+│   │   │   │       ├── service/            # Service layer
+│   │   │   │       └── InventoryServiceApplication.java  # Main app
+│   │   │   └── resources/
+│   │   │       ├── application.properties   # Configurations
+│   ├── Dockerfile                          # Dockerfile for containerizing the service
+│   ├── inventory-service.yaml              # Kubernetes deployment and service
+│   └── pom.xml                             # Maven project file
+│
+├── user-service/              # Node.js User service
+│   ├── src/
+│   │   ├── controllers/        # API controllers
+│   │   ├── models/             # Data models
+│   │   ├── services/           # Business logic
+│   │   └── app.js              # Main application file
+│   ├── Dockerfile              # Dockerfile for containerizing the service
+│   ├── user-service.yaml       # Kubernetes deployment and service
+│   ├── package.json            # Node.js dependencies and scripts
+│   └── package-lock.json       # Lock file for dependencies
+│
+├── infrastructure/             # Terraform for cloud resources
+│   ├── main.tf                 # Main Terraform configuration
+│   ├── variables.tf            # Variables for Terraform
+│   ├── outputs.tf              # Outputs for Terraform
+│   └── provider.tf             # Cloud provider configuration (e.g., AWS)
+│
+├── .gitignore                  # Git ignore file
+├── README.md                   # Project documentation
+└── docker-compose.yaml         # Optional: Docker Compose for local development
